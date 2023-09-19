@@ -22,9 +22,9 @@ export default function QueryProcessor(query: string): string {
 
   const mulMatch = query.match(/What is (\d+) multiplied by (\d+)/);
   if (mulMatch) {
-    const x: number = parseInt(addMatch[1]);
-    const y: number = parseInt(addMatch[2]);
-    return (x+y).toString();
+    const x: number = parseInt(mulMatch[1]);
+    const y: number = parseInt(mulMatch[2]);
+    return (x*y).toString();
   }
 
   return "";
